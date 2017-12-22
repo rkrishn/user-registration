@@ -1,0 +1,45 @@
+{
+  "name": "webpack-es6-react-ssr-boilerplate",
+  "version": "1.0.0",
+  "description": "Boiler plate for REACT, ES6, Webpack Serves the index.html from Server",
+  "scripts": {
+    "build:code": "webpack --config webpack.config.dev.js --watch",
+    "nodemon:watch": "nodemon --exec babel-node server",
+    "start": "npm-run-all --parallel build:code nodemon:watch",
+    "dev": "webpack --config webpack.config.dev.js --watch",
+    "build": "webpack --config webpack.config.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rkrishn/React-Webpack-boilerplate.git"
+  },
+  "author": "Ramakrishna <medaramkrishna@gmail.com> (http://github.com/rkrishn)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-loader": "^6.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.24.1",
+    "css-hot-loader": "^1.3.4",
+    "css-loader": "^0.23.1",
+    "express": "^4.13.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-libs-browser": "^0.5.3",
+    "postcss-loader": "^2.0.9",
+    "react-hot-loader": "^3.0.0-beta.5",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.8.3",
+    "webpack-hot-middleware": "^2.12.2"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.2.0",
+    "reload": "^2.2.2"
+  }
+}
