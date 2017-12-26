@@ -38,7 +38,8 @@ app.get('/',function(req, res, next){
       let renderProps = {
           preloadState: `window.__PRELOADED_STATE__ =${JSON.stringify(preloadState).replace(/</g, '\\u003c')}`,
           script: 'static/bundle.js',
-          css: 'static/css/stylus.css',
+          mainCss: 'static/css/stylus.css',
+          materialCss: 'static/css/material.css',
           appComponent: ReactDOMServer.renderToString(<App data={preloadState}/>)
       };
   

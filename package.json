@@ -1,5 +1,5 @@
 {
-  "name": "webpack-es6-react-ssr-boilerplate",
+  "name": "user-registration",
   "version": "1.0.0",
   "description": "Boiler plate for REACT, ES6, Webpack Serves the index.html from Server",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rkrishn/React-Webpack-boilerplate.git"
+    "url": "https://github.com/rkrishn/user-registration.git"
   },
   "author": "Ramakrishna <medaramkrishna@gmail.com> (http://github.com/rkrishn)",
   "license": "MIT",
@@ -25,9 +25,12 @@
     "css-loader": "^0.23.1",
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^3.0.2",
+    "material-ui": "^1.0.0-beta.24",
     "node-libs-browser": "^0.5.3",
+    "npm-run-all": "^4.1.2",
     "postcss-loader": "^2.0.9",
     "react-hot-loader": "^3.0.0-beta.5",
+    "react-tap-event-plugin": "^3.0.2",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.0.0",
