@@ -10,7 +10,8 @@ module.exports = {
         //'react-hot-loader/patch',
         //'webpack-hot-middleware/client',
         './src/main.js',
-        './src/styles/style.styl'
+        './src/styles/style.styl',
+        './src/styles/main.css'
     ],
     output: {
         path: path.join(__dirname, 'dist'),
@@ -32,12 +33,12 @@ module.exports = {
             use: ['css-hot-loader'].concat(ExtractTextPlugin.extract([ 'css-loader', 'stylus-loader' ]))
             //use: extractStyleToCSS.extract([ 'css-loader', 'stylus-loader' ])
         },
-        /*{
+        {
             test: /\.css$/,
             exclude: /node_modules/,
             include: path.join(__dirname, 'src'),
-            use: extractCSS.extract('css-loader')
-        }*/
+            use: ExtractTextPlugin.extract('css-loader')
+        }
     ]
 },
     plugins: [
