@@ -1,12 +1,16 @@
 import React from 'react';
-
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 class Login extends React.Component {
 
   constructor(props){
     super(props);
     this.state={};
+    alert()
   }
   render() {
+    console.log(this.props)
+      console.log(this.state)
       return (
         <div>
          <h2>Login Form</h2>
@@ -34,4 +38,7 @@ class Login extends React.Component {
     }
   }
 
-export default Login;
+  export default connect(
+    state => ({bok: state}),
+    dispatch => bindActionCreators()
+  )(Login)
