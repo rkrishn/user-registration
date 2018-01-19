@@ -6,10 +6,12 @@ import {Provider} from 'react-redux'
 import logger from 'redux-logger'
 import createSagaMiddleware from 'redux-saga'
 import { createStore, applyMiddleware, combineReducers  } from 'redux'
-import { Router, browserHistory } from 'react-router'
+import {browserHistory } from 'react-router'
 import routes from './routes'
+import configureStore from './stores/configureStore';
+import { HashRouter as Router, Route } from 'react-router-dom';
 // Import CSS
-import styl from './styles/style.styl'
+//import styl from './styles/style.styl'
 //import css from './styles/style.css';
 /*const render = Component => {
   ReactDOM.render(
@@ -22,7 +24,7 @@ import styl from './styles/style.styl'
 const sagaMiddleware = createSagaMiddleware()
 
 // Creates the Redux store using our reducer and the logger and saga middlewares
-const store = createStore(reducer, applyMiddleware(logger))
+const store = configureStore()
 // We run the root saga automatically
 //sagaMiddleware.run(rootSaga)
 
@@ -34,7 +36,7 @@ ReactDOM.hydrate(
 );*/
 
 const render = Component => {
-  console.log(this.props)
+ // console.log(window.__PRELOADED_STATE__)
   ReactDOM.hydrate(
     <Provider store={store}>
         <Router children={routes} history={browserHistory} />
@@ -42,5 +44,5 @@ const render = Component => {
     document.getElementById('root'),
   )
 }
-
+if(typeof window !== 'undefined') 
 render(App)
